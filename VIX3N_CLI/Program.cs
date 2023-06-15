@@ -53,6 +53,11 @@ namespace VIX3N_CLI
             var globalCommand = new SlashCommandBuilder();
             globalCommand.WithName("first-global-command");
             globalCommand.WithDescription("babys first global slash command");
+            var diceCommand = new SlashCommandBuilder()
+                .WithDescription("roll dice based on standard tabletop dice notation (eg. 1d4+1)")
+                .WithName("roll-dice")
+                .AddOption("roll", ApplicationCommandOptionType.String, "standard dice notation to roll", isRequired: true)
+                .AddOption("private", ApplicationCommandOptionType.Boolean, "do you want others to see this roll", isRequired: true);
 
             var guildCommand = new Discord.SlashCommandBuilder()
                 .WithName("list-roles")
@@ -63,6 +68,7 @@ namespace VIX3N_CLI
             {
                 await guild.CreateApplicationCommandAsync(guildCommand.Build());
                 await _client.CreateGlobalApplicationCommandAsync(globalCommand.Build());
+                await _client.CreateGlobalApplicationCommandAsync(diceCommand.Build());
             }
             catch (HttpException e)
             {

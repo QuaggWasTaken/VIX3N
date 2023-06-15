@@ -18,6 +18,9 @@ namespace VIX3N_CLI
                 case "list-roles":
                     await HandleListRoleCommand(command);
                     break;
+                case "roll-dice":
+                    await HandleDiceRollCommand(command);
+                    break;
             }
         }
         public async Task HandleListRoleCommand(SocketSlashCommand command)
@@ -33,6 +36,20 @@ namespace VIX3N_CLI
                 .WithCurrentTimestamp();
 
             await command.RespondAsync(embed: embedBuilder.Build());
+        }
+
+        public async Task HandleDiceRollCommand(SocketSlashCommand command)
+        {
+            await command.RespondAsync(embed: DiceRoll(command), ephemeral: (bool)command.Data.Options.ToArray()[1].Value );
+        }
+
+        public Embed DiceRoll(SocketSlashCommand cmd)
+        {
+            var embedBuilder = new EmbedBuilder()
+                .WithAuthor($"{cmd.User.ToString}")
+                .WithDescription($"Rolled {cmd.Data.Options.First().Value}");
+
+            return embedBuilder.Build();
         }
     }
 }
