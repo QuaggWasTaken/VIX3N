@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VIX3N_CLI": {
+      "commandName": "Project",
+      "commandLineArgs": ""
+    }
+  }
+}

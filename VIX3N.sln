@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VIX3N_CLI", "VIX3N_CLI\VIX3N_CLI.csproj", "{283BBC18-6B21-4A5E-9732-4F4962C9614B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{283BBC18-6B21-4A5E-9732-4F4962C9614B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283BBC18-6B21-4A5E-9732-4F4962C9614B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283BBC18-6B21-4A5E-9732-4F4962C9614B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283BBC18-6B21-4A5E-9732-4F4962C9614B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59A95D6D-E2B4-4804-87A6-826EFFCD4F06}
+	EndGlobalSection
+EndGlobal
